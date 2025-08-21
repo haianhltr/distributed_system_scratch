@@ -1,0 +1,58 @@
+{
+  "jobs": [
+    {
+      "id": "job_550e8400",
+      "op": "sum",
+      "payload": {
+        "a": 42,
+        "b": 58
+      },
+      "lease_until": "2025-01-19T10:15:00Z",
+      "attempt": 1,
+      "metadata": {
+        "priority": "normal",
+        "source": "api",
+        "created_at": "2025-01-19T10:00:00Z"
+      }
+    },
+    {
+      "id": "job_660f9511",
+      "op": "multiply",
+      "payload": {
+        "a": 7,
+        "b": 9
+      },
+      "lease_until": "2025-01-19T10:15:00Z",
+      "attempt": 1,
+      "metadata": {
+        "priority": "high",
+        "source": "scheduler",
+        "created_at": "2025-01-19T10:01:00Z"
+      }
+    },
+    {
+      "id": "job_771fa622",
+      "op": "sum",
+      "payload": {
+        "a": -5,
+        "b": 15
+      },
+      "lease_until": "2025-01-19T10:20:00Z",
+      "attempt": 2,
+      "metadata": {
+        "priority": "low",
+        "source": "retry",
+        "created_at": "2025-01-19T09:55:00Z",
+        "previous_attempts": [
+          {
+            "attempt": 1,
+            "bot_id": "bot_xyz789",
+            "failed_at": "2025-01-19T10:05:00Z",
+            "error": "timeout"
+          }
+        ]
+      }
+    }
+  ],
+  "cursor": "eyJsYXN0X2pvYl9pZCI6Impvyl83NzFmYTYyMiJ9"
+}

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(touch:*)",
+      "Bash(pytest:*)",
+      "Bash(python -m pytest tests/unit/scheduler/test_scheduler.py::TestScheduler::test_tick_no_jobs -v)",
+      "Bash(pip install:*)",
+      "Bash(python -m pytest tests/unit/scheduler/test_scheduler.py -v)",
+      "Bash(python -m pytest tests/unit/ -v --tb=short)",
+      "Bash(python -m pytest tests/unit/scheduler/test_scheduler.py::TestScheduler::test_report_failure_to_outbox -v -s)",
+      "Bash(python -m pytest tests/unit/machine/test_bot_lifecycle.py -v)",
+      "Bash(python -m pytest tests/unit/machine/test_bot_lifecycle.py::TestBotLifecycle::test_run_loop_continues_on_error -v)",
+      "Bash(python -m pytest tests/unit/scheduler/test_scheduler.py::TestScheduler::test_concurrent_tick_calls -v)",
+      "Bash(python -m pytest tests/unit/scheduler/test_scheduler.py::TestScheduler::test_malformed_job_data -v -s)",
+      "Bash(python -m pytest tests/unit/scheduler/test_scheduler.py::TestScheduler::test_malformed_job_data -v)",
+      "Bash(python -m pytest tests/unit/scheduler/test_scheduler.py::TestScheduler::test_tick_with_jobs -v)"
+    ],
+    "deny": []
+  }
+}

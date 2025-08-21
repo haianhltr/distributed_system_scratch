@@ -1,0 +1,24 @@
+{
+  "bot_id": "bot_abc123",
+  "auth": {
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJib3RfaWQiOiJib3RfYWJjMTIzIiwiaWF0IjoxNjQwOTk1MjAwfQ.example",
+    "refresh_token": "refresh_token_xyz",
+    "expires_in": 3600
+  },
+  "assignment": {
+    "operations": ["sum", "subtract", "multiply"],
+    "max_concurrency": 5,
+    "paused": false
+  },
+  "config": {
+    "heartbeat_interval": 30,
+    "claim_batch_size": 10,
+    "job_lease_ttl": 300,
+    "progress_report_interval": 60
+  },
+  "endpoints": {
+    "heartbeat": "/v1/bots/{bot_id}/heartbeat",
+    "claim": "/v1/jobs/claim",
+    "report": "/v1/jobs/{job_id}/{action}"
+  }
+}
